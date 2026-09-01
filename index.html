@@ -1,0 +1,1660 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Portfolio Seminar PPG Calon Guru 2026 | Fadilatul Fajri, S.Pd.</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream: {
+              50: '#FCFAF6',
+              100: '#F7F3EB',
+              200: '#EFE8DC',
+              300: '#E5D9C7',
+            },
+            mocha: {
+              50: '#FAF6F3',
+              100: '#F4ECE6',
+              200: '#EADCD3',
+              300: '#D5B9A8',
+              400: '#BE9A84',
+              500: '#A67C65',
+              600: '#8C624D',
+              700: '#744F3D',
+              800: '#5C3D2E',
+              900: '#442D20',
+            },
+            academic: {
+              navy: '#1E293B',
+              slate: '#334155',
+              gold: '#C5A059'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            display: ['Outfit', '"Plus Jakarta Sans"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-cream-50 text-gray-800 antialiased selection:bg-mocha-200 selection:text-mocha-900">
+
+  <!-- TOP PROGRESS BAR -->
+  <div class="progress-bar-container">
+    <div id="progressBarFill" class="progress-bar-fill"></div>
+  </div>
+
+  <!-- TOP FIXED HEADER (SEMINAR HUD) -->
+  <header class="top-header no-print">
+    <div class="flex items-center gap-3">
+      <div class="w-8 h-8 rounded-lg bg-mocha-800 flex items-center justify-center text-white font-bold font-display text-sm shadow-sm">
+        UMP
+      </div>
+      <div>
+        <h1 class="text-xs font-bold text-gray-900 tracking-wide uppercase">PPG Calon Guru 2026</h1>
+        <p class="text-[10px] text-mocha-700 font-medium">PPKn • Universitas Muhammadiyah Purwokerto</p>
+      </div>
+    </div>
+
+    <!-- Quick Controls -->
+    <div class="flex items-center gap-2">
+      <!-- Quick Jump Selector -->
+      <div class="relative hidden md:block">
+        <select id="quickJumpSelect" class="text-xs bg-white border border-mocha-200 rounded-full px-3 py-1.5 font-medium text-gray-700 focus:outline-none focus:ring-2 focus:ring-mocha-500 cursor-pointer shadow-sm">
+          <option value="0">01. Cover Portofolio</option>
+          <option value="1">02. Menu Utama</option>
+          <option value="2">03. Profil Calon Guru</option>
+          <option value="3">04. Roadmap Refleksi Belajar</option>
+          <option value="4">05. Topik 1 — Visi Pendidikan</option>
+          <option value="5">06. Topik 2 — Filosofi Pendidikan</option>
+          <option value="6">07. Topik 3 — PPDP</option>
+          <option value="7">08. Topik 4 — PMAD</option>
+          <option value="8">09. Topik 5 — PPL Terbimbing</option>
+          <option value="9">10. Topik 6 — Pola Pikir Bertumbuh</option>
+          <option value="10">11. Topik 7 — Diferensiasi</option>
+          <option value="11">12. Sintesis Perjalanan Belajar</option>
+          <option value="12">13. Kontak Jejaring</option>
+          <option value="13">14. Closing / Thank You</option>
+        </select>
+      </div>
+
+      <!-- Slide Counter Badge -->
+      <div class="bg-mocha-100 text-mocha-900 font-mono text-xs font-bold px-2.5 py-1 rounded-full border border-mocha-300">
+        <span id="slideCounter">01 / 14</span>
+      </div>
+
+      <!-- Mode Toggle Button (Slide vs Web) -->
+      <button id="modeToggleBtn" title="Ganti Mode Tampilan (Slide / Web)" class="text-xs bg-white hover:bg-cream-100 border border-mocha-200 text-mocha-900 px-3 py-1.5 rounded-full font-semibold flex items-center gap-1.5 shadow-sm transition">
+        <i data-lucide="presentation" class="w-3.5 h-3.5"></i>
+        <span class="hidden sm:inline">Mode Slide</span>
+      </button>
+
+      <!-- Fullscreen Button -->
+      <button id="fullscreenBtn" title="Layar Penuh (F)" class="p-1.5 text-mocha-800 hover:text-mocha-900 bg-white hover:bg-cream-100 border border-mocha-200 rounded-full shadow-sm transition">
+        <i data-lucide="maximize-2" class="w-3.5 h-3.5"></i>
+      </button>
+    </div>
+  </header>
+
+
+  <!-- ========================================================================= -->
+  <!-- MAIN SLIDES CONTAINER (14 SECTIONS) -->
+  <!-- ========================================================================= -->
+  <main id="mainSlidesContainer" class="relative">
+
+    <!-- ==================== 1. COVER ==================== -->
+    <section id="cover" class="slide-section active bg-gradient-to-b from-cream-50 via-cream-100 to-cream-50">
+      <div class="max-w-6xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        
+        <!-- Left Column: Editorial Info -->
+        <div class="lg:col-span-7 flex flex-col items-start space-y-5 text-left">
+          
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-mocha-100 border border-mocha-300 text-mocha-900 text-xs font-semibold tracking-wider uppercase">
+            <span class="w-2 h-2 rounded-full bg-mocha-600 animate-pulse"></span>
+            Seminar PPG Calon Guru Gelombang 1 Tahun 2026
+          </div>
+
+          <div class="space-y-2">
+            <p class="font-display font-bold text-sm tracking-widest text-mocha-600 uppercase">E-Portfolio Digital</p>
+            <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 tracking-tight leading-[1.15]">
+              Refleksi Pengalaman Belajar <span class="italic text-mocha-700 font-normal">Semester I</span>
+            </h1>
+          </div>
+
+          <div class="editorial-divider"></div>
+
+          <!-- Identity Card -->
+          <div class="card-academic p-5 w-full bg-white/90 border-l-4 border-l-mocha-700">
+            <h2 class="text-xl sm:text-2xl font-bold text-gray-900 font-display">Fadilatul Fajri, S.Pd.</h2>
+            <div class="mt-2 space-y-1 text-sm text-gray-600">
+              <p class="flex items-center gap-2">
+                <i data-lucide="award" class="w-4 h-4 text-mocha-600"></i>
+                <span class="font-medium text-gray-800">Program Studi:</span> Pendidikan Pancasila dan Kewarganegaraan (PPKn)
+              </p>
+              <p class="flex items-center gap-2">
+                <i data-lucide="building-2" class="w-4 h-4 text-mocha-600"></i>
+                <span class="font-medium text-gray-800">Perguruan Tinggi:</span> Universitas Muhammadiyah Purwokerto
+              </p>
+              <p class="flex items-center gap-2">
+                <i data-lucide="compass" class="w-4 h-4 text-mocha-600"></i>
+                <span class="font-medium text-gray-800">Tema Besar:</span> Menumbuhkan Guru Reflektif, Berkarakter & Adaptif
+              </p>
+            </div>
+          </div>
+
+          <!-- Call to Action -->
+          <div class="flex flex-wrap items-center gap-4 pt-2">
+            <button onclick="goToSlide(1)" class="btn-primary-mocha group text-base">
+              <span>Buka Menu Utama</span>
+              <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+            </button>
+            <button onclick="goToSlide(2)" class="btn-secondary-cream text-base">
+              <i data-lucide="user" class="w-4 h-4"></i>
+              <span>Profil Calon Guru</span>
+            </button>
+          </div>
+
+        </div>
+
+        <!-- Right Column: Profile Picture Showcase -->
+        <div class="lg:col-span-5 flex justify-center lg:justify-end">
+          <div class="relative max-w-sm w-full">
+            <!-- Background Decorative Framing -->
+            <div class="absolute -inset-3 bg-gradient-to-tr from-mocha-300 to-cream-200 rounded-[2rem] transform -rotate-2 opacity-70 blur-[1px]"></div>
+            
+            <div class="photo-frame relative bg-white p-2">
+              <img src="assets/images/profile.jpg" alt="Fadilatul Fajri, S.Pd." class="w-full h-auto max-h-[460px] object-cover rounded-[1.5rem] shadow-inner">
+              
+              <div class="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md p-3.5 rounded-xl border border-mocha-200/80 shadow-md">
+                <div class="flex items-center justify-between">
+                  <div>
+                    <p class="text-xs font-semibold text-mocha-800 uppercase tracking-wider">Calon Guru Profesional</p>
+                    <p class="text-sm font-bold text-gray-900">Fadilatul Fajri, S.Pd.</p>
+                  </div>
+                  <span class="w-8 h-8 rounded-full bg-cream-100 flex items-center justify-center text-mocha-700">
+                    <i data-lucide="sparkles" class="w-4 h-4"></i>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==================== 2. MENU UTAMA ==================== -->
+    <section id="menu-utama" class="slide-section bg-cream-50">
+      <div class="max-w-6xl mx-auto w-full space-y-6">
+        
+        <!-- Header Section -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between border-b border-mocha-200/80 pb-4 gap-3">
+          <div>
+            <span class="badge-tag badge-mocha mb-2">Navigasi Interaktif</span>
+            <h2 class="text-3xl sm:text-4xl font-bold font-serif text-gray-900">Menu Utama E-Portfolio</h2>
+            <p class="text-sm text-gray-600">Pilih modul atau 7 topik refleksi mata kuliah Semester I untuk mendalami perjalanan belajar.</p>
+          </div>
+          <!-- Quick Nav Pills -->
+          <div class="flex flex-wrap gap-2">
+            <button onclick="goToSlide(2)" class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-white border border-mocha-200 hover:bg-mocha-50 text-mocha-800 transition flex items-center gap-1.5">
+              <i data-lucide="user" class="w-3.5 h-3.5"></i> Profil
+            </button>
+            <button onclick="goToSlide(3)" class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-white border border-mocha-200 hover:bg-mocha-50 text-mocha-800 transition flex items-center gap-1.5">
+              <i data-lucide="map" class="w-3.5 h-3.5"></i> Perjalanan
+            </button>
+            <button onclick="goToSlide(11)" class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-white border border-mocha-200 hover:bg-mocha-50 text-mocha-800 transition flex items-center gap-1.5">
+              <i data-lucide="layers" class="w-3.5 h-3.5"></i> Sintesis
+            </button>
+            <button onclick="goToSlide(12)" class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-white border border-mocha-200 hover:bg-mocha-50 text-mocha-800 transition flex items-center gap-1.5">
+              <i data-lucide="send" class="w-3.5 h-3.5"></i> Kontak
+            </button>
+          </div>
+        </div>
+
+        <!-- 7 Main Topics Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          
+          <!-- Card 01 -->
+          <div onclick="goToSlide(4)" class="card-academic p-5 cursor-pointer flex flex-col justify-between group hover:border-mocha-500">
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <span class="giant-number">01</span>
+                <span class="p-2 rounded-lg bg-mocha-50 text-mocha-700 group-hover:bg-mocha-700 group-hover:text-white transition">
+                  <i data-lucide="eye" class="w-4 h-4"></i>
+                </span>
+              </div>
+              <h3 class="font-bold text-base text-gray-900 font-display group-hover:text-mocha-800 transition">Visi Pendidikan</h3>
+              <p class="text-xs text-gray-500 mt-1 line-clamp-2">Arah transformasi & perumusan visi pendidik berlandaskan Profil Pelajar Pancasila.</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-mocha-100 flex items-center justify-between text-xs font-semibold text-mocha-700 group-hover:text-mocha-900">
+              <span>Buka Refleksi</span>
+              <i data-lucide="chevron-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+            </div>
+          </div>
+
+          <!-- Card 02 -->
+          <div onclick="goToSlide(5)" class="card-academic p-5 cursor-pointer flex flex-col justify-between group hover:border-mocha-500">
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <span class="giant-number">02</span>
+                <span class="p-2 rounded-lg bg-mocha-50 text-mocha-700 group-hover:bg-mocha-700 group-hover:text-white transition">
+                  <i data-lucide="book-open" class="w-4 h-4"></i>
+                </span>
+              </div>
+              <h3 class="font-bold text-base text-gray-900 font-display group-hover:text-mocha-800 transition">Filosofi Pendidikan</h3>
+              <p class="text-xs text-gray-500 mt-1 line-clamp-2">Pemikiran Ki Hadjar Dewantara, Sistem Among & menuntun kodrat anak.</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-mocha-100 flex items-center justify-between text-xs font-semibold text-mocha-700 group-hover:text-mocha-900">
+              <span>Buka Refleksi</span>
+              <i data-lucide="chevron-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+            </div>
+          </div>
+
+          <!-- Card 03 -->
+          <div onclick="goToSlide(6)" class="card-academic p-5 cursor-pointer flex flex-col justify-between group hover:border-mocha-500">
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <span class="giant-number">03</span>
+                <span class="p-2 rounded-lg bg-mocha-50 text-mocha-700 group-hover:bg-mocha-700 group-hover:text-white transition">
+                  <i data-lucide="users" class="w-4 h-4"></i>
+                </span>
+              </div>
+              <h3 class="font-bold text-base text-gray-900 font-display group-hover:text-mocha-800 transition">PPDP</h3>
+              <p class="text-xs text-gray-500 mt-1 line-clamp-2">Pemahaman Peserta Didik, profiling karakteristik & teori perkembangan.</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-mocha-100 flex items-center justify-between text-xs font-semibold text-mocha-700 group-hover:text-mocha-900">
+              <span>Buka Refleksi</span>
+              <i data-lucide="chevron-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+            </div>
+          </div>
+
+          <!-- Card 04 -->
+          <div onclick="goToSlide(7)" class="card-academic p-5 cursor-pointer flex flex-col justify-between group hover:border-mocha-500">
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <span class="giant-number">04</span>
+                <span class="p-2 rounded-lg bg-mocha-50 text-mocha-700 group-hover:bg-mocha-700 group-hover:text-white transition">
+                  <i data-lucide="clipboard-check" class="w-4 h-4"></i>
+                </span>
+              </div>
+              <h3 class="font-bold text-base text-gray-900 font-display group-hover:text-mocha-800 transition">PMAD</h3>
+              <p class="text-xs text-gray-500 mt-1 line-clamp-2">Prinsip Pengajaran & Asesmen Efektif dengan kerangka UbD & asesmen autentik.</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-mocha-100 flex items-center justify-between text-xs font-semibold text-mocha-700 group-hover:text-mocha-900">
+              <span>Buka Refleksi</span>
+              <i data-lucide="chevron-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+            </div>
+          </div>
+
+          <!-- Card 05 -->
+          <div onclick="goToSlide(8)" class="card-academic p-5 cursor-pointer flex flex-col justify-between group hover:border-mocha-500">
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <span class="giant-number">05</span>
+                <span class="p-2 rounded-lg bg-mocha-50 text-mocha-700 group-hover:bg-mocha-700 group-hover:text-white transition">
+                  <i data-lucide="graduation-cap" class="w-4 h-4"></i>
+                </span>
+              </div>
+              <h3 class="font-bold text-base text-gray-900 font-display group-hover:text-mocha-800 transition">PPL Terbimbing</h3>
+              <p class="text-xs text-gray-500 mt-1 line-clamp-2">Praktik mengajar nyata di sekolah: Plan, Teach, Observe, Reflect, Improve.</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-mocha-100 flex items-center justify-between text-xs font-semibold text-mocha-700 group-hover:text-mocha-900">
+              <span>Buka Refleksi</span>
+              <i data-lucide="chevron-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+            </div>
+          </div>
+
+          <!-- Card 06 -->
+          <div onclick="goToSlide(9)" class="card-academic p-5 cursor-pointer flex flex-col justify-between group hover:border-mocha-500">
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <span class="giant-number">06</span>
+                <span class="p-2 rounded-lg bg-mocha-50 text-mocha-700 group-hover:bg-mocha-700 group-hover:text-white transition">
+                  <i data-lucide="trending-up" class="w-4 h-4"></i>
+                </span>
+              </div>
+              <h3 class="font-bold text-base text-gray-900 font-display group-hover:text-mocha-800 transition">Pola Pikir Bertumbuh</h3>
+              <p class="text-xs text-gray-500 mt-1 line-clamp-2">Perubahan Fixed Mindset menuju Growth Mindset dalam profesi guru.</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-mocha-100 flex items-center justify-between text-xs font-semibold text-mocha-700 group-hover:text-mocha-900">
+              <span>Buka Refleksi</span>
+              <i data-lucide="chevron-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+            </div>
+          </div>
+
+          <!-- Card 07 -->
+          <div onclick="goToSlide(10)" class="card-academic p-5 cursor-pointer flex flex-col justify-between group hover:border-mocha-500 lg:col-span-2">
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <div class="flex items-center gap-3">
+                  <span class="giant-number">07</span>
+                  <span class="badge-tag badge-gold">Inklusif & Berdiferensiasi</span>
+                </div>
+                <span class="p-2 rounded-lg bg-mocha-50 text-mocha-700 group-hover:bg-mocha-700 group-hover:text-white transition">
+                  <i data-lucide="layout-grid" class="w-4 h-4"></i>
+                </span>
+              </div>
+              <h3 class="font-bold text-base text-gray-900 font-display group-hover:text-mocha-800 transition">Pembelajaran Berdiferensiasi</h3>
+              <p class="text-xs text-gray-500 mt-1">Mengakomodasi keberagaman kesiapan, minat, dan cara belajar siswa melalui diferensiasi konten, proses, produk, & lingkungan.</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-mocha-100 flex items-center justify-between text-xs font-semibold text-mocha-700 group-hover:text-mocha-900">
+              <span>Buka Refleksi</span>
+              <i data-lucide="chevron-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==================== 3. PROFIL ==================== -->
+    <section id="profil" class="slide-section bg-cream-100/60">
+      <div class="max-w-6xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        
+        <!-- Left: Photo with Personal Card -->
+        <div class="lg:col-span-5 flex flex-col items-center lg:items-start space-y-4">
+          <div class="photo-frame max-w-xs w-full bg-white p-2 shadow-xl">
+            <img src="assets/images/profile.jpg" alt="Fadilatul Fajri, S.Pd." class="w-full h-auto object-cover rounded-[1.25rem]">
+          </div>
+          
+          <div class="card-academic p-4 w-full max-w-xs bg-white text-center">
+            <h3 class="font-bold text-lg font-display text-gray-900">Fadilatul Fajri, S.Pd.</h3>
+            <p class="text-xs text-mocha-700 font-semibold mt-0.5">PPG Calon Guru Gelombang 1 Tahun 2026</p>
+            <p class="text-[11px] text-gray-500">Pendidikan Pancasila dan Kewarganegaraan</p>
+            <p class="text-[11px] text-gray-500 font-medium">Universitas Muhammadiyah Purwokerto</p>
+          </div>
+        </div>
+
+        <!-- Right: Professional Narrative -->
+        <div class="lg:col-span-7 space-y-5">
+          <div>
+            <span class="badge-tag badge-mocha mb-2">Profil Calon Pendidik</span>
+            <h2 class="text-3xl sm:text-4xl font-bold font-serif text-gray-900">Tentang Saya</h2>
+            <div class="editorial-divider mt-2"></div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            
+            <!-- Tentang Saya -->
+            <div class="card-academic p-4 bg-white">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="p-1.5 rounded-md bg-mocha-100 text-mocha-800">
+                  <i data-lucide="user-check" class="w-4 h-4"></i>
+                </span>
+                <h4 class="font-bold text-sm text-gray-900 font-display">TENTANG SAYA</h4>
+              </div>
+              <p class="text-xs text-gray-600 leading-relaxed">
+                Seorang calon guru Pendidikan Pancasila yang memiliki ketertarikan mendalam pada dunia pendidikan, pembelajaran yang berpusat pada murid, pengembangan karakter kebangsaan, serta penciptaan iklim belajar yang bermakna.
+              </p>
+            </div>
+
+            <!-- Inspirasi Menjadi Guru -->
+            <div class="card-academic p-4 bg-white">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="p-1.5 rounded-md bg-mocha-100 text-mocha-800">
+                  <i data-lucide="heart" class="w-4 h-4"></i>
+                </span>
+                <h4 class="font-bold text-sm text-gray-900 font-display">INSPIRASI MENJADI GURU</h4>
+              </div>
+              <p class="text-xs text-gray-600 leading-relaxed">
+                Terinspirasi dari pengalaman mengajar langsung dan sosok guru yang senantiasa memberikan teladan luhur, motivasi tanpa pamrih, serta pengalaman belajar yang menggugah nalar dan hati.
+              </p>
+            </div>
+
+            <!-- Tujuan -->
+            <div class="card-academic p-4 bg-white">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="p-1.5 rounded-md bg-mocha-100 text-mocha-800">
+                  <i data-lucide="target" class="w-4 h-4"></i>
+                </span>
+                <h4 class="font-bold text-sm text-gray-900 font-display">TUJUAN</h4>
+              </div>
+              <p class="text-xs text-gray-600 leading-relaxed">
+                Menjadi guru profesional yang mampu memahami kebutuhan individual murid, menciptakan pembelajaran yang interaktif dan kontekstual, serta terus bertumbuh melalui refleksi berkelanjutan.
+              </p>
+            </div>
+
+            <!-- Harapan -->
+            <div class="card-academic p-4 bg-white">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="p-1.5 rounded-md bg-mocha-100 text-mocha-800">
+                  <i data-lucide="sparkles" class="w-4 h-4"></i>
+                </span>
+                <h4 class="font-bold text-sm text-gray-900 font-display">HARAPAN</h4>
+              </div>
+              <p class="text-xs text-gray-600 leading-relaxed">
+                Menjadi pendidik yang senantiasa reflektif, adaptif menghadapi dinamika zaman, berintegritas, dan mampu memfasilitasi setiap murid berkembang sesuai potensi dan kodrat kemerdekaannya.
+              </p>
+            </div>
+
+          </div>
+
+          <!-- Bottom Navigation Link -->
+          <div class="flex items-center justify-between pt-2">
+            <button onclick="goToSlide(1)" class="text-xs font-semibold text-gray-600 hover:text-mocha-800 flex items-center gap-1">
+              <i data-lucide="arrow-left" class="w-3.5 h-3.5"></i> Kembali ke Menu
+            </button>
+            <button onclick="goToSlide(3)" class="btn-primary-mocha text-xs py-2 px-4">
+              <span>Lanjut ke Roadmap Refleksi</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==================== 4. REFLEKSI PENGALAMAN BELAJAR (ROADMAP) ==================== -->
+    <section id="refleksi-overview" class="slide-section bg-cream-50">
+      <div class="max-w-6xl mx-auto w-full space-y-6">
+        
+        <div class="text-center max-w-3xl mx-auto space-y-2">
+          <span class="badge-tag badge-mocha">Peta Refleksi Komprehensif</span>
+          <h2 class="text-3xl sm:text-4xl font-bold font-serif text-gray-900">Refleksi Pengalaman Belajar</h2>
+          <p class="text-sm font-medium text-mocha-700">Perjalanan belajar dan perkembangan diri selama Semester I PPG Calon Guru</p>
+          <p class="text-xs text-gray-600 max-w-2xl mx-auto">
+            Tujuh topik mata kuliah saling bertaut membentuk fondasi pedagogik, kematangan sosial-emosional, serta identitas profesional saya sebagai calon pendidik Pendidikan Pancasila dan Kewarganegaraan.
+          </p>
+        </div>
+
+        <!-- 7-Stage Visual Roadmap Timeline -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-7 gap-3 pt-4">
+          
+          <!-- Step 1 -->
+          <div onclick="goToSlide(4)" class="card-academic p-3.5 text-center cursor-pointer group hover:border-mocha-600 flex flex-col justify-between">
+            <div>
+              <div class="w-8 h-8 mx-auto rounded-full bg-mocha-100 text-mocha-800 font-bold text-xs flex items-center justify-center mb-2 group-hover:bg-mocha-800 group-hover:text-white transition">01</div>
+              <h4 class="font-bold text-xs text-gray-900 font-display">Visi Pendidikan</h4>
+              <p class="text-[10px] text-gray-500 mt-1">Landasan arah & cita-cita pendidik</p>
+            </div>
+            <span class="mt-3 text-[10px] font-semibold text-mocha-700">Eksplorasi →</span>
+          </div>
+
+          <!-- Step 2 -->
+          <div onclick="goToSlide(5)" class="card-academic p-3.5 text-center cursor-pointer group hover:border-mocha-600 flex flex-col justify-between">
+            <div>
+              <div class="w-8 h-8 mx-auto rounded-full bg-mocha-100 text-mocha-800 font-bold text-xs flex items-center justify-center mb-2 group-hover:bg-mocha-800 group-hover:text-white transition">02</div>
+              <h4 class="font-bold text-xs text-gray-900 font-display">Filosofi Pendidikan</h4>
+              <p class="text-[10px] text-gray-500 mt-1">Sistem Among & Pemikiran KHD</p>
+            </div>
+            <span class="mt-3 text-[10px] font-semibold text-mocha-700">Eksplorasi →</span>
+          </div>
+
+          <!-- Step 3 -->
+          <div onclick="goToSlide(6)" class="card-academic p-3.5 text-center cursor-pointer group hover:border-mocha-600 flex flex-col justify-between">
+            <div>
+              <div class="w-8 h-8 mx-auto rounded-full bg-mocha-100 text-mocha-800 font-bold text-xs flex items-center justify-center mb-2 group-hover:bg-mocha-800 group-hover:text-white transition">03</div>
+              <h4 class="font-bold text-xs text-gray-900 font-display">PPDP</h4>
+              <p class="text-[10px] text-gray-500 mt-1">Karakteristik & Perkembangan Murid</p>
+            </div>
+            <span class="mt-3 text-[10px] font-semibold text-mocha-700">Eksplorasi →</span>
+          </div>
+
+          <!-- Step 4 -->
+          <div onclick="goToSlide(7)" class="card-academic p-3.5 text-center cursor-pointer group hover:border-mocha-600 flex flex-col justify-between">
+            <div>
+              <div class="w-8 h-8 mx-auto rounded-full bg-mocha-100 text-mocha-800 font-bold text-xs flex items-center justify-center mb-2 group-hover:bg-mocha-800 group-hover:text-white transition">04</div>
+              <h4 class="font-bold text-xs text-gray-900 font-display">PMAD</h4>
+              <p class="text-[10px] text-gray-500 mt-1">Prinsip Pengajaran & Asesmen UbD</p>
+            </div>
+            <span class="mt-3 text-[10px] font-semibold text-mocha-700">Eksplorasi →</span>
+          </div>
+
+          <!-- Step 5 -->
+          <div onclick="goToSlide(8)" class="card-academic p-3.5 text-center cursor-pointer group hover:border-mocha-600 flex flex-col justify-between">
+            <div>
+              <div class="w-8 h-8 mx-auto rounded-full bg-mocha-100 text-mocha-800 font-bold text-xs flex items-center justify-center mb-2 group-hover:bg-mocha-800 group-hover:text-white transition">05</div>
+              <h4 class="font-bold text-xs text-gray-900 font-display">PPL Terbimbing</h4>
+              <p class="text-[10px] text-gray-500 mt-1">Praktik Mengajar Nyata di Kelas</p>
+            </div>
+            <span class="mt-3 text-[10px] font-semibold text-mocha-700">Eksplorasi →</span>
+          </div>
+
+          <!-- Step 6 -->
+          <div onclick="goToSlide(9)" class="card-academic p-3.5 text-center cursor-pointer group hover:border-mocha-600 flex flex-col justify-between">
+            <div>
+              <div class="w-8 h-8 mx-auto rounded-full bg-mocha-100 text-mocha-800 font-bold text-xs flex items-center justify-center mb-2 group-hover:bg-mocha-800 group-hover:text-white transition">06</div>
+              <h4 class="font-bold text-xs text-gray-900 font-display">Pola Pikir Bertumbuh</h4>
+              <p class="text-[10px] text-gray-500 mt-1">Growth Mindset Pendidik</p>
+            </div>
+            <span class="mt-3 text-[10px] font-semibold text-mocha-700">Eksplorasi →</span>
+          </div>
+
+          <!-- Step 7 -->
+          <div onclick="goToSlide(10)" class="card-academic p-3.5 text-center cursor-pointer group hover:border-mocha-600 flex flex-col justify-between">
+            <div>
+              <div class="w-8 h-8 mx-auto rounded-full bg-mocha-100 text-mocha-800 font-bold text-xs flex items-center justify-center mb-2 group-hover:bg-mocha-800 group-hover:text-white transition">07</div>
+              <h4 class="font-bold text-xs text-gray-900 font-display">Diferensiasi</h4>
+              <p class="text-[10px] text-gray-500 mt-1">Pembelajaran Berpusat Murid</p>
+            </div>
+            <span class="mt-3 text-[10px] font-semibold text-mocha-700">Eksplorasi →</span>
+          </div>
+
+        </div>
+
+        <div class="text-center pt-2">
+          <button onclick="goToSlide(4)" class="btn-primary-mocha">
+            <span>Mulai Masuk Topik 1 — Visi Pendidikan</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==================== 5. TOPIK 1 — VISI PENDIDIKAN ==================== -->
+    <section id="topik-1" class="slide-section bg-cream-50">
+      <div class="max-w-6xl mx-auto w-full space-y-6">
+        
+        <!-- Header -->
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between border-b border-mocha-200/80 pb-4 gap-3">
+          <div>
+            <div class="flex items-center gap-2 mb-1">
+              <span class="badge-tag badge-mocha">Topik 01</span>
+              <span class="text-xs font-semibold text-gray-500 uppercase">Mata Kuliah Inti</span>
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-bold font-serif text-gray-900">Visi Pendidikan</h2>
+            <p class="text-xs text-gray-600 mt-0.5">Membangun Fondasi dan Arah Pendidik Profesional Berkarakter Pancasila</p>
+          </div>
+          
+          <!-- Artifact Action Button -->
+          <div>
+            <a href="https://drive.google.com/file/d/101q3mGeb96FmXIppvnPUYeqmlP3bVrF6/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn-artifact group">
+              <i data-lucide="file-text" class="w-4 h-4 text-gold-400 group-hover:scale-110 transition"></i>
+              <span>📄 Buka Refleksi Lengkap (PDF)</span>
+              <i data-lucide="external-link" class="w-3.5 h-3.5 opacity-70"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 4 Key Reflective Pillars -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          
+          <!-- 1. Apa yang dipelajari -->
+          <div class="card-academic p-5 bg-white border-l-4 border-l-mocha-600">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="p-1.5 rounded-lg bg-mocha-100 text-mocha-800">
+                <i data-lucide="book-marked" class="w-4 h-4"></i>
+              </span>
+              <h3 class="font-bold text-sm text-gray-900 font-display">Apa yang Saya Pelajari?</h3>
+            </div>
+            <ul class="space-y-1.5 text-xs text-gray-600 list-disc list-inside">
+              <li>Konsep visi pendidikan nasional dan arah transformasi kurikulum abad ke-21.</li>
+              <li>Penyusunan visi pribadi guru yang berorientasi pada Profil Pelajar Pancasila.</li>
+              <li>Peran guru sebagai agen perubahan moral dan etika kewarganegaraan peserta didik.</li>
+            </ul>
+          </div>
+
+          <!-- 2. Hal paling bermakna -->
+          <div class="card-academic p-5 bg-white border-l-4 border-l-gold-500">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="p-1.5 rounded-lg bg-gold-100 text-gold-600">
+                <i data-lucide="sparkle" class="w-4 h-4"></i>
+              </span>
+              <h3 class="font-bold text-sm text-gray-900 font-display">Hal yang Paling Bermakna</h3>
+            </div>
+            <ul class="space-y-1.5 text-xs text-gray-600 list-disc list-inside">
+              <li>Menyadari visi guru bukan sekadar formalitas dokumen, melainkan jiwa yang menjiwai setiap interaksi di kelas.</li>
+              <li>Pentingnya membangun keteladanan nyata dalam menanamkan nilai-nilai Pancasila.</li>
+              <li>Pendidikan sebagai proses memanusiakan manusia seutuhnya (*humanisasi*).</li>
+            </ul>
+          </div>
+
+          <!-- 3. Perubahan pemahaman -->
+          <div class="card-academic p-5 bg-white border-l-4 border-l-mocha-400">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="p-1.5 rounded-lg bg-mocha-100 text-mocha-800">
+                <i data-lucide="refresh-cw" class="w-4 h-4"></i>
+              </span>
+              <h3 class="font-bold text-sm text-gray-900 font-display">Perubahan Pemahaman Saya</h3>
+            </div>
+            <ul class="space-y-1.5 text-xs text-gray-600 list-disc list-inside">
+              <li>Semula memandang guru sebatas pengajar materi teks menjadi arsitek peradaban dan karakter murid.</li>
+              <li>Memahami bahwa visi pembelajaran harus berakar pada kebutuhan riil konteks peserta didik.</li>
+              <li>Refleksi kritis menjadi instrumen esensial untuk menjaga keselarasan visi dengan tindakan.</li>
+            </ul>
+          </div>
+
+          <!-- 4. Relevansi sebagai calon guru -->
+          <div class="card-academic p-5 bg-white border-l-4 border-l-academic-navy">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="p-1.5 rounded-lg bg-slate-100 text-academic-navy">
+                <i data-lucide="compass" class="w-4 h-4"></i>
+              </span>
+              <h3 class="font-bold text-sm text-gray-900 font-display">Relevansi bagi Saya sebagai Calon Guru</h3>
+            </div>
+            <ul class="space-y-1.5 text-xs text-gray-600 list-disc list-inside">
+              <li>Menjadi kompas navigasi dalam merancang modul ajar dan iklim kelas PPKn yang demokratis.</li>
+              <li>Memperkuat komitmen profesional dalam membimbing murid menjadi warga negara yang sadar hak dan kewajiban.</li>
+              <li>Menumbuhkan konsistensi etis dalam pengambilan keputusan pembelajaran.</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- Navigation Footer -->
+        <div class="flex items-center justify-between pt-2 border-t border-mocha-200/60">
+          <button onclick="goToSlide(3)" class="text-xs font-semibold text-gray-600 hover:text-mocha-800 flex items-center gap-1">
+            <i data-lucide="arrow-left" class="w-3.5 h-3.5"></i> Kembali ke Roadmap
+          </button>
+          <button onclick="goToSlide(5)" class="btn-primary-mocha text-xs py-2 px-4">
+            <span>Lanjut ke Topik 2: Filosofi Pendidikan</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==================== 6. TOPIK 2 — FILOSOFI PENDIDIKAN ==================== -->
+    <section id="topik-2" class="slide-section bg-cream-100/50">
+      <div class="max-w-6xl mx-auto w-full space-y-6">
+        
+        <!-- Header -->
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between border-b border-mocha-200/80 pb-4 gap-3">
+          <div>
+            <div class="flex items-center gap-2 mb-1">
+              <span class="badge-tag badge-mocha">Topik 02</span>
+              <span class="text-xs font-semibold text-gray-500 uppercase">Mata Kuliah Inti</span>
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-bold font-serif text-gray-900">Filosofi Pendidikan</h2>
+            <p class="text-xs text-gray-600 mt-0.5">Pemikiran Ki Hadjar Dewantara, Sistem Among, dan Kodrat Murid</p>
+          </div>
+          
+          <!-- Artifact Action Button -->
+          <div>
+            <a href="https://drive.google.com/file/d/1p91wCu5F4Rj7hWUe7v9VfxHHqa3u-0i6/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn-artifact group">
+              <i data-lucide="file-text" class="w-4 h-4 text-gold-400 group-hover:scale-110 transition"></i>
+              <span>📄 Buka Refleksi Lengkap (PDF)</span>
+              <i data-lucide="external-link" class="w-3.5 h-3.5 opacity-70"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 4 Key Reflective Pillars -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          
+          <!-- 1. Apa yang dipelajari -->
+          <div class="card-academic p-5 bg-white border-l-4 border-l-mocha-600">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="p-1.5 rounded-lg bg-mocha-100 text-mocha-800">
+                <i data-lucide="book-open" class="w-4 h-4"></i>
+              </span>
+              <h3 class="font-bold text-sm text-gray-900 font-display">Apa yang Saya Pelajari?</h3>
+            </div>
+            <ul class="space-y-1.5 text-xs text-gray-600 list-disc list-inside">
+              <li>Pendidikan sebagai tuntunan hidup tumbuhnya anak sesuai kodrat alam dan kodrat zaman.</li>
+              <li>Prinsip *Trilogi Kepemimpinan* KHD: *Ing Ngarso Sung Tulodo, Ing Madyo Mangun Karso, Tut Wuri Handayani*.</li>
+              <li>Penyelarasan budi pekerti (Cipta, Rasa, Karsa, dan Pekerti) dalam pembelajaran.</li>
+            </ul>
+          </div>
+
+          <!-- 2. Hal paling bermakna -->
+          <div class="card-academic p-5 bg-white border-l-4 border-l-gold-500">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="p-1.5 rounded-lg bg-gold-100 text-gold-600">
+                <i data-lucide="heart" class="w-4 h-4"></i>
+              </span>
+              <h3 class="font-bold text-sm text-gray-900 font-display">Hal yang Paling Bermakna</h3>
+            </div>
+            <ul class="space-y-1.5 text-xs text-gray-600 list-disc list-inside">
+              <li>Analogi petani merawat padi: guru tidak bisa memaksakan padi menjadi jagung, melainkan menyediakan media dan perawatan terbaik.</li>
+              <li>Pendidikan yang memerdekakan lahir dan batin, menjunjung martabat peserta didik.</li>
+              <li>Peran guru sebagai penuntun (*pamong*), bukan pengatur otoriter.</li>
+            </ul>
+          </div>
+
+          <!-- 3. Perubahan pemahaman -->
+          <div class="card-academic p-5 bg-white border-l-4 border-l-mocha-400">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="p-1.5 rounded-lg bg-mocha-100 text-mocha-800">
+                <i data-lucide="shuffle" class="w-4 h-4"></i>
+              </span>
+              <h3 class="font-bold text-sm text-gray-900 font-display">Perubahan Pemahaman Saya</h3>
+            </div>
+            <ul class="space-y-1.5 text-xs text-gray-600 list-disc list-inside">
+              <li>Menyadari bahwa anak bukanlah kertas kosong (*tabula rasa*), melainkan telah memiliki garis potensi samar.</li>
+              <li>Tugas guru adalah menebalkan garis-garis kebaikan dan memfasilitasi penemuan jati diri murid.</li>
+              <li>Pembelajaran harus adaptif terhadap perkembangan teknologi tanpa kehilangan akar kearifan lokal.</li>
+            </ul>
+          </div>
+
+          <!-- 4. Relevansi sebagai calon guru -->
+          <div class="card-academic p-5 bg-white border-l-4 border-l-academic-navy">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="p-1.5 rounded-lg bg-slate-100 text-academic-navy">
+                <i data-lucide="user-check" class="w-4 h-4"></i>
+              </span>
+              <h3 class="font-bold text-sm text-gray-900 font-display">Relevansi bagi Saya sebagai Calon Guru</h3>
+            </div>
+            <ul class="space-y-1.5 text-xs text-gray-600 list-disc list-inside">
+              <li>Menerapkan pembelajaran PPKn yang berhamba pada murid dengan pendekatan dialogis dan partisipatif.</li>
+              <li>Menciptakan ruang kelas yang aman, nyaman, dan bebas dari intimidasi atau hukuman destruktif.</li>
+              <li>Menanamkan nilai-nilai kebangsaan secara organik melalui keteladanan nyata.</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- Navigation Footer -->
+        <div class="flex items-center justify-between pt-2 border-t border-mocha-200/60">
+          <button onclick="goToSlide(4)" class="text-xs font-semibold text-gray-600 hover:text-mocha-800 flex items-center gap-1">
+            <i data-lucide="arrow-left" class="w-3.5 h-3.5"></i> Topik Sebelumnya
+          </button>
+          <button onclick="goToSlide(6)" class="btn-primary-mocha text-xs py-2 px-4">
+            <span>Lanjut ke Topik 3: PPDP</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==================== 7. TOPIK 3 — PPDP ==================== -->
+    <section id="topik-3" class="slide-section bg-cream-50">
+      <div class="max-w-6xl mx-auto w-full space-y-6">
+        
+        <!-- Header -->
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between border-b border-mocha-200/80 pb-4 gap-3">
+          <div>
+            <div class="flex items-center gap-2 mb-1">
+              <span class="badge-tag badge-mocha">Topik 03</span>
+              <span class="text-xs font-semibold text-gray-500 uppercase">Mata Kuliah Inti</span>
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-bold font-serif text-gray-900">Pemahaman Peserta Didik & Pembelajarannya (PPDP)</h2>
+            <p class="text-xs text-gray-600 mt-0.5">Memahami Karakteristik, Tahap Perkembangan, dan Keberagaman Belajar Murid</p>
+          </div>
+          
+          <!-- Artifact Action Button -->
+          <div>
+            <a href="https://drive.google.com/file/d/138YxYbKkA8ZddaMM1qVUXuQXoyVo9b_k/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn-artifact group">
+              <i data-lucide="file-text" class="w-4 h-4 text-gold-400 group-hover:scale-110 transition"></i>
+              <span>📄 Buka Refleksi Lengkap (PDF)</span>
+              <i data-lucide="external-link" class="w-3.5 h-3.5 opacity-70"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 4 Key Reflective Pillars -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          
+          <!-- 1. Apa yang dipelajari -->
+          <div class="card-academic p-5 bg-white border-l-4 border-l-mocha-600">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="p-1.5 rounded-lg bg-mocha-100 text-mocha-800">
+                <i data-lucide="users" class="w-4 h-4"></i>
+              </span>
+              <h3 class="font-bold text-sm text-gray-900 font-display">Apa yang Saya Pelajari?</h3>
+            </div>
+            <ul class="space-y-1.5 text-xs text-gray-600 list-disc list-inside">
+              <li>Teori perkembangan kognitif (Piaget/Vygotsky) dan psikososial peserta didik usia remaja.</li>
+              <li>Penyusunan instrumen *profiling* peserta didik (minat, latar belakang sosial-budaya, gaya belajar).</li>
+              <li>Prinsip *Developmentally Appropriate Practice* (DAP) dan *Culturally Responsive Teaching* (CRT).</li>
+            </ul>
+          </div>
+
+          <!-- 2. Hal paling bermakna -->
+          <div class="card-academic p-5 bg-white border-l-4 border-l-gold-500">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="p-1.5 rounded-lg bg-gold-100 text-gold-600">
+                <i data-lucide="lightbulb" class="w-4 h-4"></i>
+              </span>
+              <h3 class="font-bold text-sm text-gray-900 font-display">Hal yang Paling Bermakna</h3>
+            </div>
+            <ul class="space-y-1.5 text-xs text-gray-600 list-disc list-inside">
+              <li>Pemahaman bahwa kegagalan siswa sering kali bukan karena kurang kemampuan, melainkan ketidaksesuaian metode pengajaran dengan gaya belajar mereka.</li>
+              <li>Pentingnya membangun ikatan emosional (*rapport*) dan rasa aman sebelum menuntut capaian akademis.</li>
+              <li>Menghargai keberagaman budaya murid sebagai modalitas belajar PPKn yang kaya.</li>
+            </ul>
+          </div>
+
+          <!-- 3. Perubahan pemahaman -->
+          <div class="card-academic p-5 bg-white border-l-4 border-l-mocha-400">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="p-1.5 rounded-lg bg-mocha-100 text-mocha-800">
+                <i data-lucide="sparkles" class="w-4 h-4"></i>
+              </span>
+              <h3 class="font-bold text-sm text-gray-900 font-display">Perubahan Pemahaman Saya</h3>
+            </div>
+            <ul class="space-y-1.5 text-xs text-gray-600 list-disc list-inside">
+              <li>Meninggalkan generalisasi bahwa semua murid di dalam satu kelas memiliki kesiapan dan motivasi yang seragam.</li>
+              <li>Menyadari bahwa observasi awal dan asesmen diagnostik non-kognitif adalah langkah krusial sebelum memulai pembelajaran.</li>
+              <li>Pendekatan berpusat pada murid menuntut fleksibilitas rencana pembelajaran.</li>
+            </ul>
+          </div>
+
+          <!-- 4. Relevansi sebagai calon guru -->
+          <div class="card-academic p-5 bg-white border-l-4 border-l-academic-navy">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="p-1.5 rounded-lg bg-slate-100 text-academic-navy">
+                <i data-lucide="check-circle-2" class="w-4 h-4"></i>
+              </span>
+              <h3 class="font-bold text-sm text-gray-900 font-display">Relevansi bagi Saya sebagai Calon Guru</h3>
+            </div>
+            <ul class="space-y-1.5 text-xs text-gray-600 list-disc list-inside">
+              <li>Mampu memetakan kebutuhan spesifik murid di kelas PPKn untuk menyusun intervensi pembelajaran yang tepat sasaran.</li>
+              <li>Membangun komunikasi dua arah yang empatik dengan peserta didik dan rekan sejawat.</li>
+              <li>Merancang materi kewarganegaraan yang kontekstual dan dekat dengan realitas kehidupan murid.</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- Navigation Footer -->
+        <div class="flex items-center justify-between pt-2 border-t border-mocha-200/60">
+          <button onclick="goToSlide(5)" class="text-xs font-semibold text-gray-600 hover:text-mocha-800 flex items-center gap-1">
+            <i data-lucide="arrow-left" class="w-3.5 h-3.5"></i> Topik Sebelumnya
+          </button>
+          <button onclick="goToSlide(7)" class="btn-primary-mocha text-xs py-2 px-4">
+            <span>Lanjut ke Topik 4: PMAD</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==================== 8. TOPIK 4 — PMAD ==================== -->
+    <section id="topik-4" class="slide-section bg-cream-100/50">
+      <div class="max-w-6xl mx-auto w-full space-y-6">
+        
+        <!-- Header -->
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between border-b border-mocha-200/80 pb-4 gap-3">
+          <div>
+            <div class="flex items-center gap-2 mb-1">
+              <span class="badge-tag badge-mocha">Topik 04</span>
+              <span class="text-xs font-semibold text-gray-500 uppercase">Mata Kuliah Inti</span>
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-bold font-serif text-gray-900">Prinsip Pengajaran & Asesmen (PMAD)</h2>
+            <p class="text-xs text-gray-600 mt-0.5">Merancang Pembelajaran Efektif melalui Backward Design & Asesmen Autentik</p>
+          </div>
+          
+          <!-- Artifact Action Button -->
+          <div>
+            <a href="https://drive.google.com/file/d/1__fseCFEL-xZv3E5PA_cjiQmb07fGno4/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn-artifact group">
+              <i data-lucide="file-text" class="w-4 h-4 text-gold-400 group-hover:scale-110 transition"></i>
+              <span>📄 Buka Refleksi Lengkap (PDF)</span>
+              <i data-lucide="external-link" class="w-3.5 h-3.5 opacity-70"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 4 Key Reflective Pillars -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          
+          <!-- 1. Apa yang dipelajari -->
+          <div class="card-academic p-5 bg-white border-l-4 border-l-mocha-600">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="p-1.5 rounded-lg bg-mocha-100 text-mocha-800">
+                <i data-lucide="layers" class="w-4 h-4"></i>
+              </span>
+              <h3 class="font-bold text-sm text-gray-900 font-display">Apa yang Saya Pelajari?</h3>
+            </div>
+            <ul class="space-y-1.5 text-xs text-gray-600 list-disc list-inside">
+              <li>Konsep kerangka *Understanding by Design* (UbD): menetapkan hasil akhir, bukti asesmen, lalu aktivitas ajar.</li>
+              <li>Perbedaan dan integrasi asesmen diagnostik, formatif (*as & for learning*), dan sumatif (*of learning*).</li>
+              <li>Penyusunan modul ajar PPKn yang koheren, terukur, dan berbasis capaian pembelajaran (CP).</li>
+            </ul>
+          </div>
+
+          <!-- 2. Hal paling bermakna -->
+          <div class="card-academic p-5 bg-white border-l-4 border-l-gold-500">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="p-1.5 rounded-lg bg-gold-100 text-gold-600">
+                <i data-lucide="check-square" class="w-4 h-4"></i>
+              </span>
+              <h3 class="font-bold text-sm text-gray-900 font-display">Hal yang Paling Bermakna</h3>
+            </div>
+            <ul class="space-y-1.5 text-xs text-gray-600 list-disc list-inside">
+              <li>Menyadari fungsi utama asesmen bukan sekadar memberi label nilai angka, melainkan sarana umpan balik untuk perbaikan belajar.</li>
+              <li>Kekuatan asesmen autentik (studi kasus, debat konstitusi, proyek kewarganegaraan) dalam menguji nalar kritis siswa.</li>
+              <li>Penyelarasan yang presisi antara tujuan pembelajaran dengan rubrik penilaian.</li>
+            </ul>
+          </div>
+
+          <!-- 3. Perubahan pemahaman -->
+          <div class="card-academic p-5 bg-white border-l-4 border-l-mocha-400">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="p-1.5 rounded-lg bg-mocha-100 text-mocha-800">
+                <i data-lucide="refresh-ccw" class="w-4 h-4"></i>
+              </span>
+              <h3 class="font-bold text-sm text-gray-900 font-display">Perubahan Pemahaman Saya</h3>
+            </div>
+            <ul class="space-y-1.5 text-xs text-gray-600 list-disc list-inside">
+              <li>Dari menyusun aktivitas mengajar terlebih dahulu menjadi merumuskan bukti ketercapaian pemahaman mendalam terlebih dahulu.</li>
+              <li>Asesmen formatif harus dilakukan secara kontinu di tengah proses pembelajaran, bukan hanya di akhir bab.</li>
+              <li>Kriteria penilaian harus transparan dan dipahami bersama oleh murid sejak awal.</li>
+            </ul>
+          </div>
+
+          <!-- 4. Relevansi sebagai calon guru -->
+          <div class="card-academic p-5 bg-white border-l-4 border-l-academic-navy">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="p-1.5 rounded-lg bg-slate-100 text-academic-navy">
+                <i data-lucide="briefcase" class="w-4 h-4"></i>
+              </span>
+              <h3 class="font-bold text-sm text-gray-900 font-display">Relevansi bagi Saya sebagai Calon Guru</h3>
+            </div>
+            <ul class="space-y-1.5 text-xs text-gray-600 list-disc list-inside">
+              <li>Kemahiran dalam merancang perangkat ajar PPKn yang terstruktur dan bermakna.</li>
+              <li>Mampu memberikan umpan balik deskriptif yang memotivasi siswa untuk merefleksikan kemajuan dirinya.</li>
+              <li>Pemanfaatan data asesmen sebagai pijakan menyusun tindak lanjut pembelajaran remedial dan pengayaan.</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- Navigation Footer -->
+        <div class="flex items-center justify-between pt-2 border-t border-mocha-200/60">
+          <button onclick="goToSlide(6)" class="text-xs font-semibold text-gray-600 hover:text-mocha-800 flex items-center gap-1">
+            <i data-lucide="arrow-left" class="w-3.5 h-3.5"></i> Topik Sebelumnya
+          </button>
+          <button onclick="goToSlide(8)" class="btn-primary-mocha text-xs py-2 px-4">
+            <span>Lanjut ke Topik 5: PPL Terbimbing</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==================== 9. TOPIK 5 — PPL TERBIMBING ==================== -->
+    <section id="topik-5" class="slide-section bg-cream-50">
+      <div class="max-w-6xl mx-auto w-full space-y-6">
+        
+        <!-- Header -->
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between border-b border-mocha-200/80 pb-4 gap-3">
+          <div>
+            <div class="flex items-center gap-2 mb-1">
+              <span class="badge-tag badge-mocha">Topik 05</span>
+              <span class="text-xs font-semibold text-gray-500 uppercase">Praktik Lapangan</span>
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-bold font-serif text-gray-900">PPL Terbimbing</h2>
+            <p class="text-xs text-gray-600 mt-0.5">Praktik Pengalaman Lapangan di Sekolah Mitra & Siklus Pembelajaran Nyata</p>
+          </div>
+          
+          <!-- Artifact Action Button -->
+          <div>
+            <a href="https://drive.google.com/file/d/1-4GRVvqkfFvCPBNr12qgHZk9sacrPtx3/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn-artifact group">
+              <i data-lucide="file-text" class="w-4 h-4 text-gold-400 group-hover:scale-110 transition"></i>
+              <span>📄 Buka Refleksi Lengkap (PDF)</span>
+              <i data-lucide="external-link" class="w-3.5 h-3.5 opacity-70"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 5-Step Cyclic Framework Banner -->
+        <div class="p-3.5 rounded-xl bg-white border border-mocha-200 shadow-sm flex flex-wrap items-center justify-around gap-2 text-xs font-bold text-gray-800">
+          <div class="flex items-center gap-1.5 text-mocha-800"><span class="w-5 h-5 rounded-full bg-mocha-100 flex items-center justify-center text-[10px]">1</span> PLAN</div>
+          <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-mocha-400 hidden sm:block"></i>
+          <div class="flex items-center gap-1.5 text-mocha-800"><span class="w-5 h-5 rounded-full bg-mocha-100 flex items-center justify-center text-[10px]">2</span> TEACH</div>
+          <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-mocha-400 hidden sm:block"></i>
+          <div class="flex items-center gap-1.5 text-mocha-800"><span class="w-5 h-5 rounded-full bg-mocha-100 flex items-center justify-center text-[10px]">3</span> OBSERVE</div>
+          <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-mocha-400 hidden sm:block"></i>
+          <div class="flex items-center gap-1.5 text-mocha-800"><span class="w-5 h-5 rounded-full bg-mocha-100 flex items-center justify-center text-[10px]">4</span> REFLECT</div>
+          <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-mocha-400 hidden sm:block"></i>
+          <div class="flex items-center gap-1.5 text-mocha-800"><span class="w-5 h-5 rounded-full bg-mocha-100 flex items-center justify-center text-[10px]">5</span> IMPROVE</div>
+        </div>
+
+        <!-- Structured 5 Reflection Aspects -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          
+          <!-- Pengalaman yang dijalani -->
+          <div class="card-academic p-4 bg-white">
+            <div class="flex items-center gap-2 mb-1.5">
+              <span class="p-1 rounded bg-mocha-100 text-mocha-800"><i data-lucide="compass" class="w-3.5 h-3.5"></i></span>
+              <h4 class="font-bold text-xs font-display text-gray-900">Pengalaman yang Dijalani</h4>
+            </div>
+            <p class="text-xs text-gray-600 leading-relaxed">
+              Melakukan observasi kultural sekolah, asistensi mengajar, merancang modul ajar terbimbing bersama Guru Pamong & DPL, serta mengajar mandiri di kelas PPKn nyata.
+            </p>
+          </div>
+
+          <!-- Tantangan yang ditemui -->
+          <div class="card-academic p-4 bg-white">
+            <div class="flex items-center gap-2 mb-1.5">
+              <span class="p-1 rounded bg-amber-100 text-amber-800"><i data-lucide="alert-circle" class="w-3.5 h-3.5"></i></span>
+              <h4 class="font-bold text-xs font-display text-gray-900">Tantangan yang Ditemui</h4>
+            </div>
+            <p class="text-xs text-gray-600 leading-relaxed">
+              Mengelola fokus dan antusiasme siswa saat jam pelajaran siang, manajemen alokasi waktu kegiatan diskusi, serta mengatasi rasa pasif beberapa peserta didik.
+            </p>
+          </div>
+
+          <!-- Pembelajaran yang diperoleh -->
+          <div class="card-academic p-4 bg-white">
+            <div class="flex items-center gap-2 mb-1.5">
+              <span class="p-1 rounded bg-emerald-100 text-emerald-800"><i data-lucide="award" class="w-3.5 h-3.5"></i></span>
+              <h4 class="font-bold text-xs font-display text-gray-900">Pembelajaran yang Diperoleh</h4>
+            </div>
+            <p class="text-xs text-gray-600 leading-relaxed">
+              Pengelolaan kelas yang kondusif berakar pada kesepakatan kelas yang partisipatif dan kemampuan guru menggunakan variasi stimulus pembelajaran yang menarik.
+            </p>
+          </div>
+
+          <!-- Perubahan yang dirasakan -->
+          <div class="card-academic p-4 bg-white">
+            <div class="flex items-center gap-2 mb-1.5">
+              <span class="p-1 rounded bg-blue-100 text-blue-800"><i data-lucide="trending-up" class="w-3.5 h-3.5"></i></span>
+              <h4 class="font-bold text-xs font-display text-gray-900">Perubahan yang Dirasakan</h4>
+            </div>
+            <p class="text-xs text-gray-600 leading-relaxed">
+              Meningkatnya kepercayaan diri, ketenangan saat memfasilitasi interaksi kelas, serta kepekaan insting pedagogik dalam merespons pertanyaan tidak terduga dari siswa.
+            </p>
+          </div>
+
+          <!-- Hal yang akan diperbaiki -->
+          <div class="card-academic p-4 bg-white md:col-span-2">
+            <div class="flex items-center gap-2 mb-1.5">
+              <span class="p-1 rounded bg-mocha-100 text-mocha-800"><i data-lucide="wrench" class="w-3.5 h-3.5"></i></span>
+              <h4 class="font-bold text-xs font-display text-gray-900">Hal yang Akan Saya Perbaiki (Komitmen Perbaikan)</h4>
+            </div>
+            <p class="text-xs text-gray-600 leading-relaxed">
+              Mengoptimalkan pemanfaatan media pembelajaran digital interaktif berbasis kuis/studi kasus nyata, memperdalam teknik *probing question* dalam diskusi nilai Pancasila, serta menyusun umpan balik tertulis yang lebih personal bagi setiap murid.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Navigation Footer -->
+        <div class="flex items-center justify-between pt-2 border-t border-mocha-200/60">
+          <button onclick="goToSlide(7)" class="text-xs font-semibold text-gray-600 hover:text-mocha-800 flex items-center gap-1">
+            <i data-lucide="arrow-left" class="w-3.5 h-3.5"></i> Topik Sebelumnya
+          </button>
+          <button onclick="goToSlide(9)" class="btn-primary-mocha text-xs py-2 px-4">
+            <span>Lanjut ke Topik 6: Pola Pikir Bertumbuh</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==================== 10. TOPIK 6 — POLA PIKIR BERTUMBUH ==================== -->
+    <section id="topik-6" class="slide-section bg-cream-100/50">
+      <div class="max-w-6xl mx-auto w-full space-y-6">
+        
+        <!-- Header -->
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between border-b border-mocha-200/80 pb-4 gap-3">
+          <div>
+            <div class="flex items-center gap-2 mb-1">
+              <span class="badge-tag badge-mocha">Topik 06</span>
+              <span class="text-xs font-semibold text-gray-500 uppercase">Mata Kuliah Inti</span>
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-bold font-serif text-gray-900">Pola Pikir Bertumbuh (Growth Mindset)</h2>
+            <p class="text-xs text-gray-600 mt-0.5">Transformasi Paradigma dari Pola Pikir Tetap Menuju Pembelajar Sepanjang Hayat</p>
+          </div>
+          
+          <!-- Artifact Action Button -->
+          <div>
+            <a href="https://drive.google.com/file/d/1bEk5KyVXMBdZr8cHwQXqZHE0DY8koE9C/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn-artifact group">
+              <i data-lucide="file-text" class="w-4 h-4 text-gold-400 group-hover:scale-110 transition"></i>
+              <span>📄 Buka Refleksi Lengkap (PDF)</span>
+              <i data-lucide="external-link" class="w-3.5 h-3.5 opacity-70"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Transformation Visual Banner -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="mindset-card mindset-fixed flex items-start gap-3">
+            <div class="p-2 rounded-lg bg-red-100 text-red-700">
+              <i data-lucide="lock" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-sm font-display text-red-900">FIXED MINDSET (Pola Pikir Tetap)</h4>
+              <p class="text-xs text-red-700 mt-1">Menganggap bakat mengajar adalah kodrat statis; memandang kesulitan sebagai kegagalan; defensif terhadap kritik dan umpan balik.</p>
+            </div>
+          </div>
+
+          <div class="mindset-card mindset-growth flex items-start gap-3">
+            <div class="p-2 rounded-lg bg-emerald-100 text-emerald-700">
+              <i data-lucide="unlock" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-sm font-display text-emerald-900">GROWTH MINDSET (Pola Pikir Bertumbuh)</h4>
+              <p class="text-xs text-emerald-800 mt-1">Kemampuan pedagogik dapat terus diasah melalui dedikasi dan refleksi; memandang tantangan sebagai peluang belajar (*learning process*).</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5 Structured Reflection Points -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+          
+          <div class="card-academic p-4 bg-white">
+            <h4 class="font-bold text-xs text-mocha-800 font-display flex items-center gap-1.5 mb-1.5">
+              <i data-lucide="history" class="w-3.5 h-3.5"></i> Pemahaman Awal
+            </h4>
+            <p class="text-xs text-gray-600">Sempat merasa cemas dan ragu akan kapasitas diri saat berhadapan dengan situasi kelas yang kompleks dan beragam.</p>
+          </div>
+
+          <div class="card-academic p-4 bg-white">
+            <h4 class="font-bold text-xs text-mocha-800 font-display flex items-center gap-1.5 mb-1.5">
+              <i data-lucide="zap" class="w-3.5 h-3.5"></i> Hal yang Menyadarkan
+            </h4>
+            <p class="text-xs text-gray-600">Pemahaman konsep *the power of yet* (belum bisa, bukan tidak bisa) dan telaah bahwa kegagalan mengajar adalah data untuk perbaikan.</p>
+          </div>
+
+          <div class="card-academic p-4 bg-white">
+            <h4 class="font-bold text-xs text-mocha-800 font-display flex items-center gap-1.5 mb-1.5">
+              <i data-lucide="refresh-cw" class="w-3.5 h-3.5"></i> Perubahan Cara Berpikir
+            </h4>
+            <p class="text-xs text-gray-600">Terbuka menerima masukan dari DPL, Guru Pamong, dan rekan sejawat sebagai nutrisi pengembangan profesional.</p>
+          </div>
+
+          <div class="card-academic p-4 bg-white">
+            <h4 class="font-bold text-xs text-mocha-800 font-display flex items-center gap-1.5 mb-1.5">
+              <i data-lucide="user-check" class="w-3.5 h-3.5"></i> Penerapan dalam Diri
+            </h4>
+            <p class="text-xs text-gray-600">Mengapresiasi usaha, proses berpikir, dan ketekunan murid daripada semata menuntut skor angka sempurna.</p>
+          </div>
+
+          <div class="card-academic p-4 bg-white sm:col-span-2">
+            <h4 class="font-bold text-xs text-mocha-800 font-display flex items-center gap-1.5 mb-1.5">
+              <i data-lucide="shield-check" class="w-3.5 h-3.5"></i> Komitmen untuk Terus Bertumbuh
+            </h4>
+            <p class="text-xs text-gray-600">Bertekad menjadi guru pembelajar sepanjang hayat (*lifelong learner*), aktif mengeksplorasi metodologi inovatif, dan menjunjung budaya refleksi diri.</p>
+          </div>
+
+        </div>
+
+        <!-- Navigation Footer -->
+        <div class="flex items-center justify-between pt-2 border-t border-mocha-200/60">
+          <button onclick="goToSlide(8)" class="text-xs font-semibold text-gray-600 hover:text-mocha-800 flex items-center gap-1">
+            <i data-lucide="arrow-left" class="w-3.5 h-3.5"></i> Topik Sebelumnya
+          </button>
+          <button onclick="goToSlide(10)" class="btn-primary-mocha text-xs py-2 px-4">
+            <span>Lanjut ke Topik 7: Pembelajaran Berdiferensiasi</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==================== 11. TOPIK 7 — PEMBELAJARAN BERDIFERENSIASI ==================== -->
+    <section id="topik-7" class="slide-section bg-cream-50">
+      <div class="max-w-6xl mx-auto w-full space-y-6">
+        
+        <!-- Header -->
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between border-b border-mocha-200/80 pb-4 gap-3">
+          <div>
+            <div class="flex items-center gap-2 mb-1">
+              <span class="badge-tag badge-mocha">Topik 07</span>
+              <span class="text-xs font-semibold text-gray-500 uppercase">Mata Kuliah Inti</span>
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-bold font-serif text-gray-900">Pembelajaran Berdiferensiasi</h2>
+            <p class="text-xs text-gray-600 mt-0.5">Memenuhi Keberagaman Kebutuhan, Kesiapan, dan Minat Setiap Peserta Didik</p>
+          </div>
+          
+          <!-- Artifact Action Button -->
+          <div>
+            <a href="https://drive.google.com/file/d/1WbbMhBaDCz4uEKKK88nHDnmb8hEdr0kV/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn-artifact group">
+              <i data-lucide="file-text" class="w-4 h-4 text-gold-400 group-hover:scale-110 transition"></i>
+              <span>📄 Buka Refleksi Lengkap (PDF)</span>
+              <i data-lucide="external-link" class="w-3.5 h-3.5 opacity-70"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Concept Pill: SETIAP MURID BERBEDA -->
+        <div class="p-4 rounded-xl bg-mocha-100 border border-mocha-200">
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-3">
+            <div class="flex items-center gap-2">
+              <span class="px-2.5 py-1 rounded bg-mocha-800 text-white font-bold text-xs tracking-wider">PRINSIP UTAMA</span>
+              <h4 class="font-bold text-sm text-mocha-900 font-display">SETIAP MURID BERBEDA & UNIK</h4>
+            </div>
+            <div class="flex flex-wrap gap-2 text-[11px] font-semibold text-mocha-800">
+              <span class="bg-white px-2 py-1 rounded-md border border-mocha-200">→ Kebutuhan Berbeda</span>
+              <span class="bg-white px-2 py-1 rounded-md border border-mocha-200">→ Kesiapan Berbeda</span>
+              <span class="bg-white px-2 py-1 rounded-md border border-mocha-200">→ Minat Berbeda</span>
+              <span class="bg-white px-2 py-1 rounded-md border border-mocha-200">→ Profil Belajar Berbeda</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 Structured Reflection Points -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          
+          <!-- 1. Apa yang dipelajari -->
+          <div class="card-academic p-5 bg-white border-l-4 border-l-mocha-600">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="p-1.5 rounded-lg bg-mocha-100 text-mocha-800">
+                <i data-lucide="layout-grid" class="w-4 h-4"></i>
+              </span>
+              <h3 class="font-bold text-sm text-gray-900 font-display">Apa yang Saya Pelajari?</h3>
+            </div>
+            <ul class="space-y-1.5 text-xs text-gray-600 list-disc list-inside">
+              <li>Strategi implementasi 4 elemen diferensiasi: Konten, Proses, Produk, dan Lingkungan Belajar.</li>
+              <li>Pemberian pendampingan berjenjang (*scaffolding*) sesuai kesiapan (*readiness level*) murid.</li>
+              <li>Penyusunan penugasan berbasis minat siswa tanpa mengurangi kedalaman kompetensi inti.</li>
+            </ul>
+          </div>
+
+          <!-- 2. Hal paling bermakna -->
+          <div class="card-academic p-5 bg-white border-l-4 border-l-gold-500">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="p-1.5 rounded-lg bg-gold-100 text-gold-600">
+                <i data-lucide="smile" class="w-4 h-4"></i>
+              </span>
+              <h3 class="font-bold text-sm text-gray-900 font-display">Hal yang Paling Bermakna</h3>
+            </div>
+            <ul class="space-y-1.5 text-xs text-gray-600 list-disc list-inside">
+              <li>Keadilan dalam pendidikan bukan memperlakukan semua anak secara sama, melainkan memberikan apa yang mereka butuhkan untuk sukses.</li>
+              <li>Melihat antusiasme murid meningkat drastis saat diberikan pilihan bentuk unjuk kerja sesuai minatnya.</li>
+            </ul>
+          </div>
+
+          <!-- 3. Perubahan pemahaman -->
+          <div class="card-academic p-5 bg-white border-l-4 border-l-mocha-400">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="p-1.5 rounded-lg bg-mocha-100 text-mocha-800">
+                <i data-lucide="repeat" class="w-4 h-4"></i>
+              </span>
+              <h3 class="font-bold text-sm text-gray-900 font-display">Perubahan Pemahaman Saya</h3>
+            </div>
+            <ul class="space-y-1.5 text-xs text-gray-600 list-disc list-inside">
+              <li>Diferensiasi bukan berarti guru harus mengajar dengan 30 rencana pembelajaran berbeda untuk 30 murid.</li>
+              <li>Diferensiasi adalah pola pikir fleksibel dalam merancang rute belajar yang variatif dan adil.</li>
+            </ul>
+          </div>
+
+          <!-- 4. Bagaimana saya menerapkannya -->
+          <div class="card-academic p-5 bg-white border-l-4 border-l-academic-navy">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="p-1.5 rounded-lg bg-slate-100 text-academic-navy">
+                <i data-lucide="check-check" class="w-4 h-4"></i>
+              </span>
+              <h3 class="font-bold text-sm text-gray-900 font-display">Bagaimana Saya Akan Menerapkannya?</h3>
+            </div>
+            <ul class="space-y-1.5 text-xs text-gray-600 list-disc list-inside">
+              <li>Melakukan pemetaan awal profil belajar peserta didik di awal semester pembelajaran PPKn.</li>
+              <li>Menyediakan variasi produk unjuk kerja materi norma dan hukum (esai kritis, infografis, video simulasi).</li>
+              <li>Menciptakan sudut belajar yang fleksibel dan kolaboratif di dalam kelas.</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- Navigation Footer -->
+        <div class="flex items-center justify-between pt-2 border-t border-mocha-200/60">
+          <button onclick="goToSlide(9)" class="text-xs font-semibold text-gray-600 hover:text-mocha-800 flex items-center gap-1">
+            <i data-lucide="arrow-left" class="w-3.5 h-3.5"></i> Topik Sebelumnya
+          </button>
+          <button onclick="goToSlide(11)" class="btn-primary-mocha text-xs py-2 px-4">
+            <span>Lanjut ke Sintesis Perjalanan Belajar</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==================== 12. SINTESIS PERJALANAN BELAJAR ==================== -->
+    <section id="sintesis" class="slide-section bg-gradient-to-b from-cream-100 via-white to-cream-100">
+      <div class="max-w-6xl mx-auto w-full space-y-6">
+        
+        <!-- Header -->
+        <div class="text-center max-w-3xl mx-auto space-y-2">
+          <span class="badge-tag badge-gold">Puncak Perjalanan Portofolio</span>
+          <h2 class="text-3xl sm:text-4xl font-bold font-serif text-gray-900">Perjalanan Belajar Saya</h2>
+          <p class="text-sm font-semibold text-mocha-800 font-display">Dari Memahami Pendidikan hingga Memahami Peran Saya sebagai Guru</p>
+          <div class="editorial-divider mx-auto mt-2"></div>
+        </div>
+
+        <!-- 6-Stage Visual Stepper -->
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 pt-2">
+          
+          <!-- Stage 1 -->
+          <div class="card-academic p-4 text-center bg-white border-t-4 border-t-mocha-500">
+            <div class="w-7 h-7 mx-auto rounded-full bg-mocha-100 text-mocha-800 font-bold text-xs flex items-center justify-center mb-2">1</div>
+            <h4 class="font-bold text-xs text-gray-900 font-display uppercase tracking-wider">AWAL</h4>
+            <p class="text-[11px] text-gray-600 mt-1">Memahami visi dan hakikat sejati pendidikan.</p>
+          </div>
+
+          <!-- Stage 2 -->
+          <div class="card-academic p-4 text-center bg-white border-t-4 border-t-mocha-600">
+            <div class="w-7 h-7 mx-auto rounded-full bg-mocha-100 text-mocha-800 font-bold text-xs flex items-center justify-center mb-2">2</div>
+            <h4 class="font-bold text-xs text-gray-900 font-display uppercase tracking-wider">MEMAHAMI</h4>
+            <p class="text-[11px] text-gray-600 mt-1">Mengenal filosofi KHD & karakteristik peserta didik.</p>
+          </div>
+
+          <!-- Stage 3 -->
+          <div class="card-academic p-4 text-center bg-white border-t-4 border-t-mocha-700">
+            <div class="w-7 h-7 mx-auto rounded-full bg-mocha-100 text-mocha-800 font-bold text-xs flex items-center justify-center mb-2">3</div>
+            <h4 class="font-bold text-xs text-gray-900 font-display uppercase tracking-wider">MENGALAMI</h4>
+            <p class="text-[11px] text-gray-600 mt-1">Menghadapi praktik nyata melalui PPL Terbimbing.</p>
+          </div>
+
+          <!-- Stage 4 -->
+          <div class="card-academic p-4 text-center bg-white border-t-4 border-t-mocha-800">
+            <div class="w-7 h-7 mx-auto rounded-full bg-mocha-100 text-mocha-800 font-bold text-xs flex items-center justify-center mb-2">4</div>
+            <h4 class="font-bold text-xs text-gray-900 font-display uppercase tracking-wider">BERTUMBUH</h4>
+            <p class="text-[11px] text-gray-600 mt-1">Mengembangkan Growth Mindset pembelajar.</p>
+          </div>
+
+          <!-- Stage 5 -->
+          <div class="card-academic p-4 text-center bg-white border-t-4 border-t-gold-600">
+            <div class="w-7 h-7 mx-auto rounded-full bg-gold-100 text-gold-700 font-bold text-xs flex items-center justify-center mb-2">5</div>
+            <h4 class="font-bold text-xs text-gray-900 font-display uppercase tracking-wider">MENERAPKAN</h4>
+            <p class="text-[11px] text-gray-600 mt-1">Merancang pembelajaran berdiferensiasi & bermakna.</p>
+          </div>
+
+          <!-- Stage 6 -->
+          <div class="card-academic p-4 text-center bg-mocha-800 text-white border-t-4 border-t-gold-400">
+            <div class="w-7 h-7 mx-auto rounded-full bg-white text-mocha-900 font-bold text-xs flex items-center justify-center mb-2">6</div>
+            <h4 class="font-bold text-xs text-gold-300 font-display uppercase tracking-wider">MENJADI</h4>
+            <p class="text-[11px] text-mocha-100 mt-1">Calon guru reflektif, adaptif, dan terus belajar.</p>
+          </div>
+
+        </div>
+
+        <!-- Climax Reflective Synthesis Card -->
+        <div class="card-academic p-6 sm:p-8 bg-white border-2 border-mocha-300 shadow-xl max-w-4xl mx-auto text-left relative overflow-hidden">
+          <div class="absolute top-0 right-0 transform translate-x-4 -translate-y-4 opacity-10 pointer-events-none">
+            <i data-lucide="quote" class="w-32 h-32 text-mocha-900"></i>
+          </div>
+
+          <div class="flex items-center gap-2 mb-3">
+            <span class="p-2 rounded-lg bg-mocha-100 text-mocha-800">
+              <i data-lucide="sparkles" class="w-5 h-5"></i>
+            </span>
+            <h3 class="font-bold text-base sm:text-lg font-display text-gray-900">REFLEKSI SINTESIS SEMESTER I</h3>
+          </div>
+
+          <p class="text-xs sm:text-sm font-semibold text-mocha-700 italic mb-2">
+            “Apa perubahan terbesar dalam diri saya setelah mengikuti pembelajaran Semester I?”
+          </p>
+
+          <p class="text-sm sm:text-base text-gray-700 leading-relaxed text-justify">
+            Perubahan terbesar dalam diri saya setelah menempuh seluruh rangkaian pembelajaran Semester I PPG Calon Guru adalah pergeseran paradigma mendasar dari sekadar <em>“pengajar yang mentransfer isi buku teks kurikulum”</em> menjadi seorang <strong>“pendidik fasilitator yang menuntun kodrat dan memerdekakan potensi peserta didik”</strong>. Kini saya meyakini bahwa keberhasilan proses pembelajaran PPKn bukan diukur dari seberapa cepat materi diselesaikan, melainkan dari seberapa bermakna murid mengalami pembelajaran yang menghargai keberagaman minat, melatih nalar kritis, dan menumbuhkan budi pekerti luhur sebagai warga negara yang berintegritas.
+          </p>
+        </div>
+
+        <!-- Navigation Footer -->
+        <div class="flex items-center justify-between pt-2 border-t border-mocha-200/60">
+          <button onclick="goToSlide(10)" class="text-xs font-semibold text-gray-600 hover:text-mocha-800 flex items-center gap-1">
+            <i data-lucide="arrow-left" class="w-3.5 h-3.5"></i> Topik Sebelumnya
+          </button>
+          <button onclick="goToSlide(12)" class="btn-primary-mocha text-xs py-2 px-4">
+            <span>Lanjut ke Kontak & Jejaring</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==================== 13. KONTAK ==================== -->
+    <section id="kontak" class="slide-section bg-cream-50">
+      <div class="max-w-6xl mx-auto w-full space-y-6">
+        
+        <div class="text-center max-w-2xl mx-auto space-y-2">
+          <span class="badge-tag badge-mocha">Jejaring Profesional</span>
+          <h2 class="text-3xl sm:text-4xl font-bold font-serif text-gray-900">Let's Connect</h2>
+          <p class="text-xs text-gray-600">Mari berkolaborasi, berdiskusi, dan berbagi inspirasi pendidikan untuk kemajuan generasi bangsa.</p>
+          <div class="editorial-divider mx-auto mt-2"></div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+          
+          <!-- Identity Summary -->
+          <div class="lg:col-span-5 card-academic p-6 bg-white space-y-4">
+            <div class="flex items-center gap-4">
+              <img src="assets/images/profile.jpg" alt="Fadilatul Fajri" class="w-16 h-16 rounded-full object-cover border-2 border-mocha-500 shadow-sm">
+              <div>
+                <h3 class="font-bold text-lg text-gray-900 font-display">Fadilatul Fajri, S.Pd.</h3>
+                <p class="text-xs text-mocha-700 font-semibold">PPG Calon Guru Gelombang 1 2026</p>
+                <p class="text-[11px] text-gray-500">Pendidikan Pancasila dan Kewarganegaraan</p>
+              </div>
+            </div>
+
+            <div class="pt-3 border-t border-mocha-100 space-y-2 text-xs text-gray-600">
+              <div class="flex items-center gap-2">
+                <i data-lucide="building" class="w-4 h-4 text-mocha-600"></i>
+                <span>Universitas Muhammadiyah Purwokerto</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="map-pin" class="w-4 h-4 text-mocha-600"></i>
+                <span>Purwokerto, Jawa Tengah, Indonesia</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="book-open" class="w-4 h-4 text-mocha-600"></i>
+                <span>Bidang Keahlian: Pembelajaran PPKn & Karakter</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social Channels Grid -->
+          <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-3 gap-4">
+            
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/fadilatul-fajri-9578b424a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer" class="card-academic p-5 bg-white text-center group hover:border-[#0A66C2] flex flex-col justify-between">
+              <div class="space-y-2">
+                <div class="w-12 h-12 mx-auto rounded-xl bg-[#0A66C2]/10 text-[#0A66C2] flex items-center justify-center group-hover:bg-[#0A66C2] group-hover:text-white transition">
+                  <i data-lucide="linkedin" class="w-6 h-6"></i>
+                </div>
+                <h4 class="font-bold text-sm text-gray-900 font-display">LinkedIn</h4>
+                <p class="text-[11px] text-gray-500">Profil Profesional & Jejaring Karir</p>
+              </div>
+              <span class="mt-4 inline-flex items-center justify-center gap-1 text-xs font-semibold text-[#0A66C2]">
+                Kunjungi Profil <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+              </span>
+            </a>
+
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/fdlatul_fajri?igsi=aTEwcng1eGN1emRn" target="_blank" rel="noopener noreferrer" class="card-academic p-5 bg-white text-center group hover:border-[#E1306C] flex flex-col justify-between">
+              <div class="space-y-2">
+                <div class="w-12 h-12 mx-auto rounded-xl bg-[#E1306C]/10 text-[#E1306C] flex items-center justify-center group-hover:bg-gradient-to-tr group-hover:from-amber-500 group-hover:to-[#E1306C] group-hover:text-white transition">
+                  <i data-lucide="instagram" class="w-6 h-6"></i>
+                </div>
+                <h4 class="font-bold text-sm text-gray-900 font-display">Instagram</h4>
+                <p class="text-[11px] text-gray-500">@fdlatul_fajri</p>
+              </div>
+              <span class="mt-4 inline-flex items-center justify-center gap-1 text-xs font-semibold text-[#E1306C]">
+                Follow Instagram <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+              </span>
+            </a>
+
+            <!-- YouTube -->
+            <a href="https://youtube.com/@fadilatulfajrioficial?si=4d8lyZP5Rp0qgAgK" target="_blank" rel="noopener noreferrer" class="card-academic p-5 bg-white text-center group hover:border-[#FF0000] flex flex-col justify-between">
+              <div class="space-y-2">
+                <div class="w-12 h-12 mx-auto rounded-xl bg-[#FF0000]/10 text-[#FF0000] flex items-center justify-center group-hover:bg-[#FF0000] group-hover:text-white transition">
+                  <i data-lucide="youtube" class="w-6 h-6"></i>
+                </div>
+                <h4 class="font-bold text-sm text-gray-900 font-display">YouTube</h4>
+                <p class="text-[11px] text-gray-500">@fadilatulfajrioficial</p>
+              </div>
+              <span class="mt-4 inline-flex items-center justify-center gap-1 text-xs font-semibold text-[#FF0000]">
+                Tonton Kanal <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+              </span>
+            </a>
+
+          </div>
+
+        </div>
+
+        <!-- Navigation Footer -->
+        <div class="flex items-center justify-between pt-2 border-t border-mocha-200/60">
+          <button onclick="goToSlide(11)" class="text-xs font-semibold text-gray-600 hover:text-mocha-800 flex items-center gap-1">
+            <i data-lucide="arrow-left" class="w-3.5 h-3.5"></i> Kembali ke Sintesis
+          </button>
+          <button onclick="goToSlide(13)" class="btn-primary-mocha text-xs py-2 px-4">
+            <span>Halaman Penutup / Closing</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==================== 14. CLOSING / THANK YOU ==================== -->
+    <section id="closing" class="slide-section bg-gradient-to-b from-cream-100 via-cream-50 to-cream-100 text-center">
+      <div class="max-w-4xl mx-auto w-full space-y-6 flex flex-col items-center justify-center">
+        
+        <div class="w-24 h-24 sm:w-28 sm:h-28 photo-frame p-1 mx-auto bg-white shadow-2xl">
+          <img src="assets/images/profile.jpg" alt="Fadilatul Fajri, S.Pd." class="w-full h-full object-cover rounded-[1rem]">
+        </div>
+
+        <div class="space-y-3 max-w-2xl mx-auto">
+          <span class="badge-tag badge-mocha">Seminar PPG Calon Guru 2026</span>
+          <h2 class="text-4xl sm:text-5xl font-extrabold font-serif text-gray-900 tracking-tight">TERIMA KASIH</h2>
+          
+          <div class="editorial-divider mx-auto"></div>
+
+          <!-- Reflective Closing Quote -->
+          <blockquote class="text-base sm:text-lg font-serif italic text-mocha-900 leading-relaxed py-3 px-4 rounded-xl bg-white/70 border border-mocha-200/60 shadow-sm">
+            “Menjadi guru bukan tentang berhenti belajar, tetapi tentang terus bertumbuh untuk menjadi pendidik yang lebih baik.”
+          </blockquote>
+        </div>
+
+        <!-- Identity Sign-off -->
+        <div class="space-y-1">
+          <h3 class="text-xl sm:text-2xl font-bold font-display text-gray-900">Fadilatul Fajri, S.Pd.</h3>
+          <p class="text-xs sm:text-sm text-mocha-800 font-semibold">Pendidikan Profesi Guru (PPG) Calon Guru Gelombang 1 Tahun 2026</p>
+          <p class="text-xs text-gray-600">Program Studi Pendidikan Pancasila dan Kewarganegaraan</p>
+          <p class="text-xs text-gray-600 font-medium">Universitas Muhammadiyah Purwokerto</p>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="flex flex-wrap items-center justify-center gap-3 pt-4">
+          <button onclick="goToSlide(0)" class="btn-secondary-cream text-xs py-2.5 px-5">
+            <i data-lucide="home" class="w-4 h-4"></i>
+            <span>Kembali ke Cover</span>
+          </button>
+          <button onclick="goToSlide(1)" class="btn-primary-mocha text-xs py-2.5 px-5">
+            <i data-lucide="grid" class="w-4 h-4"></i>
+            <span>Buka Menu Utama</span>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ========================================================================= -->
+  <!-- UNIVERSAL FLOATING NAVIGATION BAR -->
+  <!-- ========================================================================= -->
+  <nav id="floatingNav" class="floating-nav no-print" aria-label="Navigasi Cepat Portofolio">
+    
+    <!-- Previous Slide -->
+    <button id="prevSlideBtn" title="Slide Sebelumnya (Panah Kiri)" class="p-1.5 rounded-full hover:bg-mocha-100 text-gray-700 transition">
+      <i data-lucide="chevron-left" class="w-4 h-4"></i>
+    </button>
+
+    <div class="h-4 w-px bg-mocha-200 mx-0.5"></div>
+
+    <!-- Quick Section Links -->
+    <button onclick="goToSlide(0)" data-target="cover" class="floating-nav-btn active">
+      <i data-lucide="home" class="w-3.5 h-3.5"></i>
+      <span class="hidden sm:inline">HOME</span>
+    </button>
+
+    <button onclick="goToSlide(1)" data-target="menu" class="floating-nav-btn">
+      <i data-lucide="grid" class="w-3.5 h-3.5"></i>
+      <span class="hidden sm:inline">MENU</span>
+    </button>
+
+    <button onclick="goToSlide(2)" data-target="profil" class="floating-nav-btn">
+      <i data-lucide="user" class="w-3.5 h-3.5"></i>
+      <span class="hidden sm:inline">PROFIL</span>
+    </button>
+
+    <button onclick="goToSlide(3)" data-target="refleksi" class="floating-nav-btn">
+      <i data-lucide="book-open" class="w-3.5 h-3.5"></i>
+      <span class="hidden sm:inline">REFLEKSI</span>
+    </button>
+
+    <button onclick="goToSlide(11)" data-target="sintesis" class="floating-nav-btn">
+      <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+      <span class="hidden sm:inline">SINTESIS</span>
+    </button>
+
+    <button onclick="goToSlide(12)" data-target="kontak" class="floating-nav-btn">
+      <i data-lucide="send" class="w-3.5 h-3.5"></i>
+      <span class="hidden sm:inline">KONTAK</span>
+    </button>
+
+    <div class="h-4 w-px bg-mocha-200 mx-0.5"></div>
+
+    <!-- Next Slide -->
+    <button id="nextSlideBtn" title="Slide Berikutnya (Panah Kanan / Spasi)" class="p-1.5 rounded-full hover:bg-mocha-100 text-gray-700 transition">
+      <i data-lucide="chevron-right" class="w-4 h-4"></i>
+    </button>
+
+  </nav>
+
+
+  <!-- ========================================================================= -->
+  <!-- MODAL HELPER FOR ARTIFACT PREVIEW -->
+  <!-- ========================================================================= -->
+  <div id="artifactModal" class="modal-backdrop" role="dialog" aria-modal="true">
+    <div class="modal-dialog p-6 space-y-4">
+      <div class="flex items-center justify-between border-b border-mocha-200 pb-3">
+        <div>
+          <span id="modalTopicTag" class="badge-tag badge-mocha text-[10px]">Topik Refleksi</span>
+          <h3 id="modalTitle" class="text-lg font-bold font-display text-gray-900 mt-1">Dokumen Artefak Refleksi</h3>
+        </div>
+        <button id="modalCloseBtn" class="p-1 rounded-lg text-gray-400 hover:text-gray-700 hover:bg-gray-100 transition">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <p id="modalDesc" class="text-xs text-gray-600 leading-relaxed">
+        Dokumen artefak refleksi lengkap tersimpan aman di Google Drive dalam format PDF. Klik tombol di bawah untuk membuka dan menelaah dokumen.
+      </p>
+
+      <div class="pt-3 border-t border-mocha-100 flex items-center justify-end gap-3">
+        <button onclick="document.getElementById('artifactModal').classList.remove('active')" class="btn-secondary-cream text-xs py-2 px-4">
+          Tutup
+        </button>
+        <a id="modalOpenBtn" href="#" target="_blank" rel="noopener noreferrer" class="btn-artifact text-xs py-2 px-4">
+          <span>Buka di Tab Baru</span>
+          <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Application Scripts -->
+  <script src="assets/js/app.js"></script>
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+  </script>
+</body>
+</html>
